@@ -1,29 +1,30 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstname = $_POST['firstname'];
-    $lastname = $_POST['lastname'];
-    $country = $_POST['country'];
-    $subject = $_POST['subject'];
+    $field_name = $_POST['cf_name'];
+    $field_email = $_POST['cf_email'];
+    $field_message = $_POST['cf_message'];
 
-    // Email address to receive the form submissions
     $to = 'jaydeepkandekar8@gmail.com';
+    $subject = 'Your Subject: ' . $field_name;
 
-    // Subject of the email
-    $email_subject = 'New Contact Form Submission';
+    $body_message = 'From: ' . $field_name . "\n";
+    $body_message .= 'E-mail: ' . $field_email . "\n";
+    $body_message .= 'Message: ' . $field_message;
 
-    // Email content
-    $email_message = "First Name: $firstname\n\nLast Name: $lastname\n\nCountry: $country\n\nSubject: $subject";
-
-    // Headers
-    $headers = "From: $firstname $lastname <$to>" . "\r\n" .
-        "Reply-To: $to" . "\r\n" .
-        "X-Mailer: PHP/" . phpversion();
+    $headers = 'From: ' . $field_email . "\r\n";
+    $headers .= 'Reply-To: ' . $field_email . "\r\n";
 
     // Send email
-    if (mail($to, $email_subject, $email_message, $headers)) {
-        echo 'Thank you for contacting us!';
+    if (mail($to, $subject, $body_message, $headers)) {
+        echo '<script language="javascript" type="text/javascript">
+                alert("Success Message");
+                window.location = "contact.html";
+              </script>';
     } else {
-        echo 'Sorry, something went wrong. Please try again later.';
+        echo '<script language="javascript" type="text/javascript">
+                alert("Error Message");
+                window.location = "contact.html";
+              </script>';
     }
 }
 ?>
