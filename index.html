@@ -329,6 +329,37 @@ valign="middle" colspan="2">
 <a href="https://github.com/JaydeepKandekar" class="fa fa-github"></a>
 
 
+<head>
+    <title>SEND MESSAGE</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#chat-form').submit(function(e) {
+                e.preventDefault(); // Prevent the form from submitting
+                var message = $('#message').val();
+                $.ajax({
+                    type: 'POST',
+                    url: 'send_email.php', // Path to the PHP file that sends the email
+                    data: {
+                        message: message
+                    },
+                    success: function(response) {
+                        $('#chat-log').append('<p><strong>You:</strong> ' + message + '</p>');
+                        $('#message').val('');
+                    }
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>SEND MESSAGE</h1>
+    <div id="chat-log"></div>
+    <form id="chat-form">
+        <input type="text" id="message" placeholder="Type your message..." required>
+        <button type="submit">Send</button>
+    </form>
+</body>
 </td>
 </tr>
 </table>
