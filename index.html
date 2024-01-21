@@ -129,8 +129,34 @@
             font-size: 24px;
             text-decoration: underline;
         }
+   .cv-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #cv-frame {
+            width: 100%;
+            height: 600px; /* Adjust the height as needed */
+            border: none;
+        }
+    .about-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .about-content {
+            width: 60%; /* Adjust the width as needed */
+        }
+
+        .about-image img {
+            max-width: 100%; /* Set maximum width for the image */
+            height: auto; /* Maintain aspect ratio */
+        }
     </style>
 </head>
+
 
 <body>
 
@@ -227,34 +253,13 @@
 <!PROJECTS(end)>
 <hr color="white">
 <!CURRICULUM VITAE(begin)>
-<table id="CURRICULUM VITAE" border="0" width="100%" cellpadding="0" cellspacing="0">
-<tr>
-<td>
-<table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
-<tr>
-<td height="180" align="center"
-valign="middle" colspan="2">
-<font face="Times New Roman" size="7"
-color="white">
-<u>CURRICULUM VITAE</u>
-</font>
-
-</td>
-</tr>
-<tr>
-<td width="60%">
-<font face="Times New Roman" size="4"color="white">
-    <object data="Images/CV.pdf" type="application/pdf" width="100%" height="500px">
-      <p>Unable to display PDF file. <a href="https://github.com/JaydeepKandekar/Portfolio/blob/main/Images/CV.pdf">Download</a> instead.</p>
-    </object>
-
-</font>
-</td>
-</tr>
-</table>
-</td>
-</tr>
-</table>
+<div class="section" id="CURRICULUM VITAE">
+        <h1>CURRICULUM VITAE</h1>
+        <div class="cv-container">
+            <iframe id="cv-frame" src="Images/CV.pdf" title="Curriculum Vitae"></iframe>
+        </div>
+    </div>
+    <hr>
 <!CURRICULUM VITAE(end)>
 <hr color="white">
 <!HOBBIES & INTERESTS(begin)>
