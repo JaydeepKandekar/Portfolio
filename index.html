@@ -154,11 +154,49 @@
             max-width: 30%; /* Set maximum width for the image */
             height: auto; /* Maintain aspect ratio */
         }
+.contact-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 20px;
+        }
+
+        .contact-info,
+        .contact-form {
+            flex: 1;
+            max-width: 400px;
+            text-align: left;
+            padding: 20px;
+            margin: 10px;
+        }
+
+        .contact-form form {
+            display: grid;
+            gap: 10px;
+        }
+
+        .contact-form label {
+            font-size: 16px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+        }
+
+        .contact-form input[type="submit"] {
+            background-color: #007bb5;
+            color: white;
+            cursor: pointer;
+        }
     </style>
 </head>
 
-
 <body>
+
 
 <!Header(begin)>
     <div id="header">
@@ -263,94 +301,128 @@
 <!CURRICULUM VITAE(end)>
 
 <!HOBBIES & INTERESTS(begin)>
-<div class="section" id="HOBBIES & INTERESTS">
-    <h1>HOBBIES & INTERESTS</h1>
-    <div class="images">
+<table id="HOBBIES & INTERESTS" border="0" width="100%" cellpadding="0" cellspacing="0">
+<tr>
+<td>
+<table border="0" cellpadding="15" cellspacing="0" width="80%" align="center">
+<tr>
+<td height="180" align="center"
+valign="middle" colspan="2">
+<font face="Times New Roman" size="7"
+color="white">
+<u>HOBBIES & INTERESTS</u>
+</font>
+<style>
+        .images {
+            display: flex;
+            flex-wrap: wrap;
+            margin: 0 30px;
+            padding: 50px;
+        }
+  
+        .photo {
+            max-width: 31.333%;
+            padding: 0 5px;
+            height: 240px;
+        }
+  
+        .photo img {
+            width: 100%;
+            height: 100%;
+        }
+    </style> 
+  <div class="images">
         <div class="photo">
-            <img src="Images/obs.jpeg" alt="JVP's Kesariwada Observatory, Pune" style="max-width: 100%; height: auto;" />
-            <p>JVP's Kesariwada Observatory, Pune</p>
+            <img src="Images/obs.jpeg" alt="JVP's Kesariwada Observatory, Pune" />
         </div>
+  
         <div class="photo">
-            <img src="Images/me.jpeg" alt="Me with my astromaster" style="max-width: 100%; height: auto;" />
-            <p>Me with my Astromaster</p>
+            <img src="Images/me.jpeg" alt="Me with my astromaster" />
         </div>
+          
         <div class="photo">
-            <img src="Images/moon.jpeg" alt="MOON HDR" style="max-width: 100%; height: auto;" />
-            <p>MOON HDR</p>
+            <img src="Images/moon.jpeg" alt="MOON HDR" />
         </div>
-        <div class="photo">
-            <img src="Images/moon2.jpeg" alt="MOON" style="max-width: 100%; height: auto;" />
-            <p>MOON</p>
+                <div class="photo">
+            <img src="Images/moon2.jpeg" alt="MOON" />
         </div>
-        <div class="photo">
-            <img src="Images/orion.jpeg" alt="Orion" style="max-width: 100%; height: auto;" />
-            <p>Orion</p>
+                <div class="photo">
+            <img src="Images/orion.jpeg" alt="Orion" />
         </div>
-        <div class="photo">
-            <img src="Images/tele.jpeg" alt="Astromaster 130 EQ, Newtonian reflector 6 inches" style="max-width: 100%; height: auto;" />
-            <p>Astromaster 130 EQ, Newtonian Reflector 6 inches</p>
+                <div class="photo">
+            <img src="Images/tele.jpeg" alt="Astromaster 130 EQ, Newtonian reflector 6 inches" />
         </div>
-        <div class="photo">
-            <img src="Images/moon again.jpeg" alt="MOON" style="max-width: 100%; height: auto;" />
-            <p>MOON</p>
+                <div class="photo">
+            <img src="Images/moon again.jpeg" alt="MOON" />
         </div>
-        <div class="photo">
-            <img src="Images/Eclipse.jpeg" alt="Solar Eclipse on 25th October 2022" style="max-width: 100%; height: auto;" />
-            <p>Solar Eclipse on 25th October 2022</p>
+                <div class="photo">
+            <img src="Images/Eclipse.jpeg" alt="Solar Eclipse on 25th October 2022" />
         </div>
-        <div class="photo">
-            <img src="Images/Fantasy edited by me in snapseed.jpeg" alt="Fantasy edited by me in snapseed" style="max-width: 100%; height: auto;" />
-            <p>Fantasy edited by me in Snapseed</p>
+                 <div class="photo">
+            <img src="Images/Fantasy edited by me in snapseed.jpeg" alt="Fantasy edited by me in snapseed" />
         </div>
     </div>
+</td>
+</tr>
+<tr>
+<td height="180" align="center"
+valign="middle" colspan="2">
+<font face="Times New Roman" size="7"
+color="white">
+<u>Blogs</u>
+    <br>
+    <iframe src="https://scribblesandwritings.blogspot.com/" style="height:500px;width:100%;" title="Blogs"></iframe>
+    <p><a href="https://scribblesandwritings.blogspot.com/" target="iframe_a">BeyondLogic</a></p>
+</font>
+</td>
+</tr>
+</table>
 
-    <div class="blogs">
-        <h2>Blogs</h2>
-        <iframe src="https://scribblesandwritings.blogspot.com/" style="height:500px;width:100%;" title="Blogs"></iframe>
-        <p><a href="https://scribblesandwritings.blogspot.com/" target="iframe_a">BeyondLogic</a></p>
-    </div>
-</div>
-<hr color="white">
+</td>
+</tr>
+</table>
+
 <!HOBBIES & INTERESTS(end)>
+<hr color="white">
 
 
 <!-- ... (previous code remains unchanged) -->
 
-<!CONTACT(begin)>
-<div class="section" id="CONTACT" style="text-align: center;">
-    <h1>CONTACT</h1>
-    <div class="contact-container" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
-        <div class="contact-info" style="flex: 1; max-width: 400px; text-align: left; padding: 20px;">
-            <p>
-                Feel free to reach out to me through the following channels:
-            </p>
-            <ul>
-                <li>
-                    <i class="fa fa-envelope"></i> Email: <a href="mailto:jaydeepkandekar8@gmail.com">jaydeepkandekar8@gmail.com</a>
-                </li>
-                <li>
-                    <i class="fa fa-github"></i> GitHub: <a href="https://github.com/JaydeepKandekar" target="_blank">JaydeepKandekar</a>
-                </li>
-            </ul>
-        </div>
-        <div class="contact-form" style="flex: 1; max-width: 400px;">
-            <form action="#" method="post">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+ <!CONTACT(begin)>
+    <div class="section" id="CONTACT" style="text-align: center;">
+        <h1>CONTACT</h1>
+        <div class="contact-container">
+            <div class="contact-info">
+                <p>
+                    Feel free to reach out to me through the following channels:
+                </p>
+                <ul>
+                    <li>
+                        <i class="fa fa-envelope"></i> Email: <a href="mailto:jaydeepkandekar8@gmail.com">jaydeepkandekar8@gmail.com</a>
+                    </li>
+                    <li>
+                        <i class="fa fa-github"></i> GitHub: <a href="https://github.com/JaydeepKandekar" target="_blank">JaydeepKandekar</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
 
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
 
-                <input type="submit" value="Submit">
-            </form>
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
         </div>
     </div>
-</div>
-<hr color="white">
-<!CONTACT(end)>
+    <hr color="white">
+    <!CONTACT(end)>
 
 <!-- ... (remaining code remains unchanged) -->
 
